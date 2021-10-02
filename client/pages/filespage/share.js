@@ -39,7 +39,7 @@ export class ShareComponent extends React.Component {
                 existings: existings.sort((a, b) => {
                     return a.path.split("/").length > b.path.split("/").length;
                 }),
-                role: existings.length === 0 ? "editor" : null
+                role: existings.length === 0 ? window.CONFIG["share_default_access"] : null
             });
         });
     }
